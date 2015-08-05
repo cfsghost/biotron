@@ -1,0 +1,35 @@
+#header {
+	background: black;
+	/*background: url(./images/header.jpg);*/
+	background-size: cover;
+	background-position: center;
+	min-height: 600px;
+	padding: 0px;
+}
+
+#header .printer {
+	background: black;
+	background: url(./images/3dprinter.jpg);
+	background-size: cover;
+	background-position: center;
+}
+
+#header h1 {
+	font-size: 62px;
+}
+
+#header .carousal {
+	padding: 0px;
+}
+
+.carousal button.slick-arrow {
+	z-index: 1000;
+}
+
+.carousal button.slick-arrow.slick-prev {
+	left: 20px;
+}
+
+.carousal button.slick-arrow.slick-next {
+	right: 20px;
+}
