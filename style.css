@@ -4,7 +4,15 @@
 	background-size: cover;
 	background-position: center;
 	min-height: 600px;
+	height: 600px;
 	padding: 0px;
+}
+
+#header .future {
+	background: black;
+	background: url(./images/future.jpg);
+	background-size: cover;
+	background-position: center;
 }
 
 #header .printer {
@@ -32,4 +40,8 @@
 
 .carousal button.slick-arrow.slick-next {
 	right: 20px;
+}
+
+#about p {
+	font-size: 20px;
 }

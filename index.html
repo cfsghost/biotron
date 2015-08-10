@@ -20,14 +20,24 @@
 	<body>
 		<div id="header" class="ui basic center aligned inverted segment">
 			<div class="carousal">
+				<div class="future">Biotron</div>
 				<div class="printer"><h1>3D Printer for Desktop</h1></div>
-				<div>your content</div>
 			</div>
 		</div>
-		<div class="ui basic center aligned segment">
-			<h1>About Us</h1>
-			<img src="images/office-icon.png" class="ui centered medium image" />
-			<p>BIOTRON is ...</p>
+		<div id="about" class="ui basic center aligned segment">
+			<img src="images/office-icon.png" class="ui right floated medium image" />
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
+			<h1 data-i18n="about.header">About Us</h1>
+			<p data-i18n="about.desc">Biotron is a biotechnology company, researching new FDA material for 3D printing.</p>
+			<br />
+			<br />
+			<br />
+			<br />
 		</div>
 		<div class="ui basic segment">
 			<p>BlahBlah...</p>
@@ -35,14 +45,38 @@
 		<div class="ui basic inverted segment">
 			<div class="ui inverted segment">
 				<img src="images/contact-icon.png" class="ui left floated small image" />
-				<h2>Contact Us</h2>
-				<div>伯樂科研股份有限公司</div>
-				<div>Biotron Research Inc.</div>
-				<div>11266 台北市北投區立農街二段23號一樓</div>
-				<div>2F., No.23, Sec. 2, Linong St., Beitou Dist., Taipei City 11266, Taiwan</div>
-				<div>+886 2-2821-0899</div>
+				<h2 data-i18n="contact.header">Contact Us</h2>
+				<div data-i18n="contact.company_name">伯樂科研股份有限公司</div>
+				<div data-i18n="contact.company_ename">Biotron Research Inc.</div>
+				<div data-i18n="contact.address">2F., No.23, Sec. 2, Linong St., Beitou Dist., Taipei City 11266, Taiwan</div>
+				<div data-i18n="contact.tel">+886 2-2821-0899</div>
 				<div>service@biotron.biz</div>
 			</div>
 		</div>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/i18next/1.6.3/i18next-1.6.3.min.js"></script>
+		<script>
+			var userLang = navigator.languages || navigator.userLanguage || [ navigator.language ];
+
+			var t = null;
+			i18n.init({
+				useCookie: false,
+				fallbackLng: 'en-US',
+				lng: userLang[0],
+				lngWhitelist: [ 'en-US', 'zh-TW' ],
+				customLoad: function(lng, ns, options, loadComplete) {
+					$.ajax('locales/' + lng + '/' + ns + '.json', { crossDomain: true, dataType: 'json' })
+						.fail(function() {
+							loadComplete(null, '{}');
+						})
+						.done(function(data) {
+							loadComplete(null, data);
+						});
+				}
+			}, function(_t) {
+				$('head').i18n();
+				$('body *').i18n();
+				t = _t;
+			});
+		</script>
 	</body>
 </html>
