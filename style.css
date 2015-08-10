@@ -13,6 +13,12 @@
 	background: url(./images/future.jpg);
 	background-size: cover;
 	background-position: center;
+	color: #000;
+}
+
+#header .future h2 {
+	text-shadow: 0 0 5px rgba(255,255,255,.8), 0 0 2px rgba(255,255,255,1), 0 0 2px rgba(50,250,200,1);
+	color: #fff;
 }
 
 #header .printer {
@@ -23,7 +29,13 @@
 }
 
 #header h1 {
-	font-size: 62px;
+	font-size: 55px;
+	text-transform: uppercase;
+}
+
+#header h2 {
+	font-size: 28px;
+	text-transform: uppercase;
 }
 
 #header .carousal {
