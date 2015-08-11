@@ -57,3 +57,12 @@
 #about p {
 	font-size: 20px;
 }
+
+#map {
+	padding: 0px;
+	margin: 0px;
+}
+
+#contact {
+	margin: 0px;
+}
