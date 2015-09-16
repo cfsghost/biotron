@@ -26,6 +26,10 @@ body {
 	color: #555;
 }
 
+#header .future h3 {
+	color: #555;
+}
+
 #header .printer {
 	background: black;
 	background: url(./images/future.jpg);
@@ -43,6 +47,13 @@ body {
 #header h2 {
 	font-family: 'Josefin Sans', sans-serif;
 	font-size: 28px;
+	font-weight: 300;
+	text-transform: uppercase;
+}
+
+#header h3 {
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 22px;
 	font-weight: 300;
 	text-transform: uppercase;
 }
