@@ -3,6 +3,7 @@ body {
 }
 
 #header {
+	margin: 0px;
 	background: black;
 	background: url(./images/header.png);
 	background-size: cover;
@@ -76,6 +77,15 @@ body {
 
 .carousal button.slick-arrow.slick-next {
 	right: 20px;
+}
+
+#events {
+	margin: 0px;
+	box-shadow: inset 0 -5px 5px rgba(0, 0, 0, 0.2);
+}
+
+#events .ui.card {
+	box-shadow: inherit;
 }
 
 #about p {
